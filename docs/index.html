@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Docs Index</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: #00f;
+      font-family: 'Press Start 2P', monospace;
+      padding: 40px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #00f;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>📁 Documents</h1>
+  <ul id="file-list"></ul>
+
+  <script>
+    // Replace this array manually or fetch it via API/server logic
+    const files = [
+      "binomial-spliff.pdf",
+      "paper.pdf",
+      "tobacco-presentation.pdf",
+      "tobacco-report.pdf",
+      "weed-presentation.pdf",
+      "weed-report.pdf",
+    ];
+
+    const list = document.getElementById("file-list");
+
+    files.forEach(file => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = file;
+      a.textContent = file;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
