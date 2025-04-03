@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Viewport meta tag for responsive scaling and zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Docs Index</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
@@ -20,11 +22,13 @@
     }
 
     .center-box {
-  	  background-color: #3a6710;
- 	    padding: 20px;
- 	    text-align: left; /* Ensures text inside is left-aligned */
- 	    width: 50%; /* Adjust width as needed */
- 	    margin: 0 auto; /* Centers the box horizontally */
+      background-color: #3a6710;
+      padding: 20px;
+      text-align: left;
+      width: 50%;
+      margin: 0 auto;
+      /* Force letter-by-letter wrapping */
+      word-break: break-all;
     }
 
     h1, p {
@@ -44,6 +48,8 @@
     a {
       color: white;
       text-decoration: none;
+      /* Force letter-by-letter wrapping for links */
+      word-break: break-all;
     }
 
     a:hover {
@@ -51,7 +57,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="center-box">
     <h1>📁 Documents</h1>
@@ -67,7 +72,7 @@
       "tobacco-report.pdf",
       "weed-presentation.pdf",
       "weed-report.pdf",
-      "autoregressive_volatility_cube.gif"
+      "autoregressive_volatility_cube.gif",
     ];
 
     const list = document.getElementById("file-list");
