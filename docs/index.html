@@ -6,30 +6,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #111;
-      color: #00f;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('../img/square_animation.gif');
+      background-repeat: repeat;
+      background-size: 90px;
       font-family: 'Press Start 2P', monospace;
-      padding: 40px;
+      color: white;
     }
+
+    .center-box {
+  	  background-color: #3a6710;
+ 	    padding: 20px;
+ 	    text-align: left; /* Ensures text inside is left-aligned */
+ 	    width: 50%; /* Adjust width as needed */
+ 	    margin: 0 auto; /* Centers the box horizontally */
+    }
+
+    h1, p {
+      margin: 0;
+      padding: 5px;
+    }
+
     ul {
       list-style-type: none;
       padding: 0;
     }
+
     li {
-      margin-bottom: 10px;
+      margin: 5px 0;
     }
+
     a {
-      color: #00f;
+      color: white;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <h1>📁 Documents</h1>
-  <ul id="file-list"></ul>
+  <div class="center-box">
+    <h1>📁 Documents</h1>
+    <ul id="file-list"></ul>
+  </div>
 
   <script>
     // Replace this array manually or fetch it via API/server logic
@@ -40,6 +67,7 @@
       "tobacco-report.pdf",
       "weed-presentation.pdf",
       "weed-report.pdf",
+      "autoregressive_volatility_cube.gif"
     ];
 
     const list = document.getElementById("file-list");
