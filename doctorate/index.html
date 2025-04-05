@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs Index</title>
+  <style>
+    body {
+      margin: 10px;
+      padding: 0;
+      background-image: url('../img/leafly.jpg');
+      background-repeat: repeat;
+      background-size: 90px;
+      font-family: 'Courier New', Courier, monospace;
+      color: rebeccapurple;
+      font-size: 12px;
+    }
+
+    .document-box {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #c8f7c5;
+      border: 1px solid green;
+      border-radius: 5px;
+    }
+
+    h1, p {
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    a {
+      color: rebeccapurple;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="document-box">
+    <h1>📁 Documents</h1>
+    <ul id="file-list"></ul>
+  </div>
+
+  <script>
+    const files = [
+      "docs/doctoral.pdf",
+      "docs/IRV.pdf"
+    ];
+
+    const list = document.getElementById("file-list");
+
+    files.forEach(file => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = file;
+      a.textContent = file;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
